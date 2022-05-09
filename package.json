@@ -1,0 +1,56 @@
+{
+  "name": "@jersson-arrivasplata-rojas/sami-utils",
+  "version": "1.0.0",
+  "description": "Libreria de funciones comunes para distintas librerias",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@highlightjs/cdn-assets": "^11.5.1",
+    "express": "^4.16.4",
+    "html2canvas": "^1.4.1",
+    "lodash": "^4.17.11",
+    "sweetalert2": "^11.4.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@types/highlight.js": "^10.1.0",
+    "@types/uglifyjs-webpack-plugin": "^1.1.2",
+    "babel-loader": "^7.1.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "fork-ts-checker-webpack-plugin": "^7.2.11",
+    "highlight-loader": "^0.7.4",
+    "highlight-webpack-plugin": "github:dimdid/highlight-webpack-plugin",
+    "highlight.js": "^11.5.1",
+    "highlight.js-async-webpack": "^1.0.4",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.20.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.1.14",
+    "@babel/polyfill": "^7.12.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "build:webpack": "webpack --config=webpack.config.js"
+  },
+  "author": "Jersson G. Arrivasplata Rojas",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jersson-arrivasplata-rojas/STENCIL-PROY-V1-SAMI-COMPONENTS-S2203.git"
+  },
+  "homepage": "https://sami.jerssonarrivasplata.com/"
+}
