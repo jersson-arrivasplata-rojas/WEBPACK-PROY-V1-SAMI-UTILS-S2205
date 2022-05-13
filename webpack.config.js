@@ -35,12 +35,20 @@ const config = {
         maxAssetSize: 512000
     },
     output: {
+        library: 'SamiUtils',
+        libraryTarget: 'var',
+        globalObject: 'this',
+        pathinfo: true,
+
+       // devtoolLineToLine: true,
         //filename: "index.js",
         //path: path.resolve(__dirname, 'dist')
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         //sourceMapFilename: '[name].[hash:8].map',
-        chunkFilename: '[id].js'
+        chunkFilename: '[id].js',
+
+        libraryTarget: 'umd'
     },
     devtool: 'source-map'
 }
@@ -69,7 +77,7 @@ function plugins() {
 function entry() {
     return {
         app: [
-            '@babel/polyfill',
+            //'@babel/polyfill',
             './src/index.ts'
         ],
         'html2canvas': [

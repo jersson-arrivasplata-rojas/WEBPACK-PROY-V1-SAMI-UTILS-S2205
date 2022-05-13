@@ -1,0 +1,15 @@
+----------------------------------------------------------
+
+npm login --registry=https://registry.npmjs.com/ --scope=/@jersson-arrivasplata-rojas
+
+npm config set @jersson-arrivasplata-rojas:registry=https://registry.npmjs.com
+npm publish --access=public
+------------------------------------------------------------------------------------------------------------
+
+npm login --registry=https://registry.npmjs.com/ --scope=/@sami-utils
+npm config set @sami-utils:registry=https://registry.npmjs.com
+npm publish --access=public
+
+npm set registry https://registry.npmjs.org/ 
+
+

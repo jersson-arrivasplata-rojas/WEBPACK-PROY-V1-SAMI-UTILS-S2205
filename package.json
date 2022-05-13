@@ -1,8 +1,13 @@
 {
   "name": "@jersson-arrivasplata-rojas/sami-utils",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Libreria de funciones comunes para distintas librerias",
-  "main": "dist/index.js",
+  "files": [
+    "dist/",
+    "loader/",
+    "src/"
+  ],
+  "main": "dist/app.js",
   "dependencies": {
     "@highlightjs/cdn-assets": "^11.5.1",
     "express": "^4.16.4",
@@ -50,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jersson-arrivasplata-rojas/STENCIL-PROY-V1-SAMI-COMPONENTS-S2203.git"
+    "url": "git+https://github.com/jersson-arrivasplata-rojas/WEBPACK-PROY-V1-SAMI-UTILS-S2205.git"
   },
   "homepage": "https://sami.jerssonarrivasplata.com/"
 }
