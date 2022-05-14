@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 
 export class SwalFireTwo {
     constructor() { }
-    swalFireTimer() {
+    swalFireTimerToCopyCode() {
         let timerInterval: any;//: NodeJS.Timeout
         Swal.fire({
             title: '¡El c&oacute;digo se ha copiado - Ctrl + v para pegar!',
