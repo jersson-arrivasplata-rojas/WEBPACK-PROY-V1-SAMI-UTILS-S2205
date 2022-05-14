@@ -5,6 +5,7 @@ export * from './html-to-canvas';
 export * from './social-media-share';
 export * from './swal-fire-two';
 export * from './utils';
+export * from './devices';
 
 /*
 

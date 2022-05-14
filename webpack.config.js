@@ -91,7 +91,8 @@ function entry() {
             "highlight.js/lib/index.js"
         ],*/
         '@highlightjs': [
-            "@highlightjs/cdn-assets/highlight.js"
+            "@highlightjs/cdn-assets/highlight.js",
+            "@highlightjs/cdn-assets/styles/default.min.css"
         ]
     };
 }
