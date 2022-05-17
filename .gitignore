@@ -1,6 +1,7 @@
 dist/
 build/
-core/
+core/node_modules/
+core/package-lock.json
 www/
 loader/
 lib/
