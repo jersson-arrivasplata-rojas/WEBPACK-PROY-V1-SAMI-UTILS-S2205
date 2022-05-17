@@ -20,7 +20,8 @@ export class HtmlToCanvas {
             return canvas;
         }).then(canvas => {
             let imageName = "layout_" + new Date().getTime() + ".png";
-            new Utils().downloadCanvasToImage(canvas, imageName);
+            const cv = document.querySelector<HTMLCanvasElement>('#' + canvas.id);
+            new Utils().downloadCanvasToImage(cv!, imageName);
         });
 
     }
