@@ -1,4 +1,6 @@
 dist/
+build/
+core/
 www/
 loader/
 lib/

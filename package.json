@@ -1,20 +1,29 @@
 {
   "name": "@jersson-arrivasplata-rojas/sami-utils",
-  "version": "0.0.6",
+  "version": "0.0.18",
   "description": "Libreria de funciones comunes para distintas librerias",
   "files": [
-    "dist/",
-    "loader/",
-    "lib/",
-    "types/"
+    "core/"
   ],
-  "main": "dist/app.js",
+  "engines": {
+    "node": "^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0"
+  },
+  "main": "./core/build/index.js",
+  "types": "./core/build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./core/build/index.d.ts",
+      "default": "./core/build/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "dependencies": {
     "@highlightjs/cdn-assets": "^11.5.1",
     "express": "^4.16.4",
     "html2canvas": "^1.4.1",
     "lodash": "^4.17.11",
-    "sweetalert2": "^11.4.12"
+    "sweetalert2": "^11.4.12",
+    "highlight.js": "^11.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -24,11 +33,11 @@
     "@types/uglifyjs-webpack-plugin": "^1.1.2",
     "babel-loader": "^7.1.5",
     "clean-webpack-plugin": "^4.0.0",
+    "copyfiles": "^2.4.1",
     "css-loader": "^6.7.1",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "highlight-loader": "^0.7.4",
     "highlight-webpack-plugin": "github:dimdid/highlight-webpack-plugin",
-    "highlight.js": "^11.5.1",
     "highlight.js-async-webpack": "^1.0.4",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
@@ -43,22 +52,31 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "build:typescript": "tsc --outDir lib --declarationDir types --declaration true",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --up 1 ",
+    "prepublish:copy": "copyfiles package.json core/",
+    "prepublish": "tsc --outDir build",
     "build:webpack": "webpack --config=webpack.config.js",
-    "build:ts:wp": "npm run build:typescript && npm run build:webpack"
+    "prepublish:dist": "copyfiles dist/**/*.* core/",
+    "prepublish:prod": "npm install --only=production --legacy-peer-deps"
   },
   "author": "Jersson G. Arrivasplata Rojas",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://registry.npmjs.com"
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jersson-arrivasplata-rojas/WEBPACK-PROY-V1-SAMI-UTILS-S2205.git"
   },
-  "homepage": "https://sami.jerssonarrivasplata.com/"
+  "homepage": "https://sami.jerssonarrivasplata.com/",
+  "keywords": [
+    "web components",
+    "components",
+    "custom elements",
+    "stencil",
+    "ionic",
+    "webpack"
+  ]
 }
